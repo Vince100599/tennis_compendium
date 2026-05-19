@@ -1,0 +1,221 @@
+/* ─── Player Page Layout ────────────────────────────────────────── */
+.player-page {
+  padding-top: var(--header-h);
+}
+
+/* ─── Player Hero ───────────────────────────────────────────────── */
+.player-hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.player-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-light);
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb:hover {
+  color: var(--ink);
+}
+
+.player-nationality {
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-light);
+  text-transform: uppercase;
+}
+
+.player-name {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 300;
+  line-height: 1.0;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+}
+
+.player-name em {
+  font-style: italic;
+  color: var(--ink-light);
+}
+
+.player-tagline {
+  font-size: 1rem;
+  color: var(--ink-light);
+  font-weight: 300;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* ─── Player Body ───────────────────────────────────────────────── */
+.player-body {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem 6rem;
+}
+
+/* ─── Profile Sections ──────────────────────────────────────────── */
+.profile-section {
+  padding: 3.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-section:last-child {
+  border-bottom: none;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+/* ─── Prose ─────────────────────────────────────────────────────── */
+.prose p {
+  font-size: 0.95rem;
+  color: var(--ink);
+  line-height: 1.85;
+  max-width: 680px;
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* ─── Stats Grid ────────────────────────────────────────────────── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+
+.stat-item {
+  background: var(--white);
+  padding: 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.stat-value {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  font-weight: 400;
+}
+
+/* ─── Grand Slam Table ──────────────────────────────────────────── */
+.slam-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.slam-table th {
+  text-align: left;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  font-weight: 500;
+  padding: 0.6rem 1rem 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.slam-table td {
+  padding: 1rem 1rem 1rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--ink);
+  font-weight: 300;
+}
+
+.slam-table tr:last-child td {
+  border-bottom: none;
+}
+
+.slam-table td:first-child {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* ─── Equipment List ────────────────────────────────────────────── */
+.equipment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.equipment-item {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.equipment-item:last-child {
+  border-bottom: none;
+}
+
+.equipment-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  font-weight: 400;
+  min-width: 110px;
+  flex-shrink: 0;
+}
+
+.equipment-value {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--ink);
+}
+
+/* ─── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slam-table {
+    font-size: 0.8rem;
+  }
+
+  .equipment-item {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+}
